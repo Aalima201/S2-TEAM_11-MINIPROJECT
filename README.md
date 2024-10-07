@@ -66,6 +66,9 @@
  [View Verilog Code](path-to-your-verilog-file.v)
 
  <details> <summary>References</summary>
+ - [Verilog Documentation](https://www.verilog.com) - Official documentation for Verilog.
+- [Logisim User Guide](https://www.cburch.com/logisim/) - A helpful guide to using Logisim.
+
 
 
 
