@@ -1,9 +1,9 @@
 #  FAULT TOLERANCE MECHANISMS FOR SPACECRAFTS
-</details>
+
+- [Abstract](#abstract)
+  </details>
 
 ---
-- [Abstract](#abstract)
-  
 - [Team](#team)
 - [Features](#features)
 - [Installation](#installation)
