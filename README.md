@@ -66,12 +66,13 @@
  [View Verilog Code](path-to-your-verilog-file.v)
 
 </details>
+---
  <details> <summary>References</summary>
- - [Verilog Documentation](https://www.verilog.com) - Official documentation for Verilog.
-- [Logisim User Guide](https://www.cburch.com/logisim/) - A helpful guide to using Logisim.
+ - [NASA Research paper](https://ntrs.nasa.gov/api/citations/20210020739/downloads/FinalCopy.pdf)
+- [ISRO Website](https://www.isro.gov.in/spacesciexp.html)
+-[Online material](https://ggn.dronacharya.info/ITDept/Downloads/QuestionBank/Odd/III%20sem/Section-A/digital-electronics_2.pdf)
 
-
-
+---
 
 
 
