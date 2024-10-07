@@ -19,7 +19,7 @@
 <details>
   <summary>Abstract</summary>
   
-  Details
+  ![Functional Block Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/hello.drawio.png) 
   
 </details>
 
