@@ -7,9 +7,9 @@
   
   **Team Members**:
   
-  - Member 1: Aalima Khan,231CS201,
-  - Member 2: Role
-  - Member 3: Role
+  - Member 1: Aalima Khan,231CS201,aalimakhan.231cs217@nitk.edu.in
+  - Member 2: Bashitha Sadipirala,231CS251,basithasadipirala.231cs251@nitk.edu.in
+  - Member 3: Bukke Lahari,231CS217,laharinaik.231cs217@nitk.edu.in
   
   
 </details>
@@ -30,7 +30,7 @@
   
   
   
-  ![Functional Block Diagram](path-to-your-image.png) 
+  ![Functional Block Diagram](https://drive.google.com/drive/u/0/folders/1UAQsvshk-sk_FEhusn2rbz5G7LRibfKx) 
   
 
   
@@ -63,7 +63,13 @@
 
 <details>
   <summary>Verilog Code</summary>
-  
-  ```verilog
+ [View Verilog Code](path-to-your-verilog-file.v)
+
+ <details> <summary>References</summary>
+
+
+
+
+
   
 
