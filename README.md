@@ -3,15 +3,18 @@
 ---
 
 <details>
-  <summary>Team Details</summary>
-  - Semester:3rd Sem B. Tech. CSE</>
-  - Section:S2</>
-  - Team id - 11</>
-  **Team Members**:
   
-  - Member 1: Aalima Khan,231CS201,aalimakhan.231cs217@nitk.edu.in
-  - Member 2: Basitha Sadipirala,231CS251,basithasadipirala.231cs251@nitk.edu.in
-  - Member 3: Bukke Lahari,231CS217,laharinaik.231cs217@nitk.edu.in
+  ## Team Details
+
+- **Semester**: 3rd Sem B. Tech. CSE
+- **Section**: S2
+- **Team ID**: 11
+
+### Team Members:
+1. **Aalima Khan**, Roll No: 231CS201, [Email](mailto:aalimakhan.231cs217@nitk.edu.in)
+2. **Basitha Sadipirala**, Roll No: 231CS251, [Email](mailto:basithasadipirala.231cs251@nitk.edu.in)
+3. **Bukke Lahari**, Roll No: 231CS217, [Email](mailto:laharinaik.231cs217@nitk.edu.in)
+
   
   
 </details>
