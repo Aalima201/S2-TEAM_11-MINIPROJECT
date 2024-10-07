@@ -68,10 +68,11 @@
 </details>
 ---
  <details> <summary>References</summary>
- - [NASA Research paper](https://ntrs.nasa.gov/api/citations/20210020739/downloads/FinalCopy.pdf)
-- [ISRO Website](https://www.isro.gov.in/spacesciexp.html)
--[Online material](https://ggn.dronacharya.info/ITDept/Downloads/QuestionBank/Odd/III%20sem/Section-A/digital-electronics_2.pdf)
+ - (https://ntrs.nasa.gov/api/citations/20210020739/downloads/FinalCopy.pdf)
+- (https://www.isro.gov.in/spacesciexp.html)
+-(https://ggn.dronacharya.info/ITDept/Downloads/QuestionBank/Odd/III%20sem/Section-A/digital-electronics_2.pdf)
 
+</details>
 ---
 
 
