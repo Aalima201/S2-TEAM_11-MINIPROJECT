@@ -8,7 +8,7 @@
   **Team Members**:
   
   - Member 1: Aalima Khan,231CS201,aalimakhan.231cs217@nitk.edu.in
-  - Member 2: Bashitha Sadipirala,231CS251,basithasadipirala.231cs251@nitk.edu.in
+  - Member 2: Basitha Sadipirala,231CS251,basithasadipirala.231cs251@nitk.edu.in
   - Member 3: Bukke Lahari,231CS217,laharinaik.231cs217@nitk.edu.in
   
   
@@ -19,7 +19,7 @@
 <details>
   <summary>Abstract</summary>
   
-  ![Functional Block Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/hello.drawio.png) 
+  ![Abstract](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/S-2_T-11_Abstract.pdf) 
   
 </details>
 
