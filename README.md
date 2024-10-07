@@ -30,7 +30,7 @@
   
   
   
-  ![Functional Block Diagram](https://drive.google.com/drive/u/0/folders/1UAQsvshk-sk_FEhusn2rbz5G7LRibfKx) 
+  ![Functional Block Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/hello.drawio.png) 
   
 
   
