@@ -4,9 +4,9 @@
 
 <details>
   <summary>Team Details</summary>
-  Semester:3rd Sem B. Tech. CSE</>
-  Section:S2</>
-  Team id - 11</>
+  - Semester:3rd Sem B. Tech. CSE</>
+  - Section:S2</>
+  - Team id - 11</>
   **Team Members**:
   
   - Member 1: Aalima Khan,231CS201,aalimakhan.231cs217@nitk.edu.in
