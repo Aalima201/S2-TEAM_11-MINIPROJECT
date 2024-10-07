@@ -66,13 +66,15 @@
  [View Verilog Code](path-to-your-verilog-file.v)
 
 </details>
+
 ---
  <details> <summary>References</summary>
- - (https://ntrs.nasa.gov/api/citations/20210020739/downloads/FinalCopy.pdf)
-- (https://www.isro.gov.in/spacesciexp.html)
+-(https://ntrs.nasa.gov/api/citations/20210020739/downloads/FinalCopy.pdf)
+-(https://www.isro.gov.in/spacesciexp.html)
 -(https://ggn.dronacharya.info/ITDept/Downloads/QuestionBank/Odd/III%20sem/Section-A/digital-electronics_2.pdf)
 
 </details>
+
 ---
 
 
