@@ -60,7 +60,7 @@
   ![Logisim Circuit Diagram](path-to-your-image.png)
   
   
-  [Download Logisim Circuit](path-to-your-logisim-file.circ)
+  [Download Logisim Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/COMPILE2.circ)
   
 </details>
 
