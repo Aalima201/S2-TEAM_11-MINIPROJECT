@@ -57,7 +57,7 @@
   
   
   
-  ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/final.png)
+  ![Logisim](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/final.png)
   
   - [Download LFSR Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/LFSR1.circ)
   - [Download Level 1 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/level1copy.circ)
