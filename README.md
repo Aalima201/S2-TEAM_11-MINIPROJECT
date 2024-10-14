@@ -93,9 +93,12 @@
  <details> <summary>References</summary>
 
 
-- [Link 1](https://ntrs.nasa.gov/api/citations/20210020739/downloads/FinalCopy.pdf)
-- [Link 2](https://www.isro.gov.in/spacesciexp.html)
-- [Link 3](https://ggn.dronacharya.info/ITDept/Downloads/QuestionBank/Odd/III%20sem/Section-A/digital-electronics_2.pdf)
+- [Link 1](https://ntrs.nasa.gov/api/citations/20210020739/downloads/FinalCopy.pdf/)
+- [Link 2](https://www.isro.gov.in/spacesciexp.html/)
+- [Link 3](https://www.esa.int/Space_Safety/Hera/Fault_detection_isolation_and_recovery/)
+- [Link 4](https://iopscience.iop.org/article/10.1088/1742-6596/2762/1/012064/pdf/)
+- [Link 5](https://www.spacenavigators.com/post/fault-detection-and-recovery-in-satellite-aocs-ensuring-resilience-in-space/)
+
 
 
 </details>
