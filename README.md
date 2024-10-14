@@ -25,7 +25,7 @@
   <summary>Abstract</summary>
   
  
-  ![Updated Abstract](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Fault%20Tolerance%20in%20Spacecrafts(ABSTRACT).pdf) 
+  -[Updated Abstract](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Fault%20Tolerance%20in%20Spacecrafts(ABSTRACT).pdf) 
   
 </details>
 
@@ -54,7 +54,7 @@
 <details>
   <summary>Working</summary>
   
-  details
+   - [Click here](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Design-Logisim.pdf)
   
 </details>
 
@@ -65,13 +65,14 @@
   
   
   
-  ![Brief description about logisim circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Design-Logisim.pdf)
+  
   ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/S2-T11.png)
   ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Level1Image.png)
   ![LEVEL 2 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Level2Image.png)
   ![LEVEL 3 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Level3.Image.png)
   ![LFSR Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/LFSRImage.png)
   
+  - [Brief description about logisim circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Design-Logisim.pdf)
   - [Download LFSR Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/LFSR1.circ)
   - [Download Level 1 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/level1copy.circ)
   - [Download Level 2 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/level2.circ)
