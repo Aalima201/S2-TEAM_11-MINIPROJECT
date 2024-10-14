@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
-  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-
-  <lib desc="#Wiring" name="0"/>
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0"/>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
@@ -22,10 +21,10 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#level1copy.circ" name="7"/>
-  <lib desc="file#level2.circ" name="8"/>
-  <lib desc="file#level3.circ" name="9"/>
-  <lib desc="file#LFSR1.circ" name="10"/>
+  <lib desc="file#C:\Users\lahar\OneDrive\Pictures\Saved Pictures\level1copy.circ" name="7"/>
+  <lib desc="file#C:\Users\lahar\OneDrive\Pictures\Saved Pictures\level2.circ" name="8"/>
+  <lib desc="file#C:\Users\lahar\OneDrive\Pictures\Saved Pictures\level3.circ" name="9"/>
+  <lib desc="file#C:\Users\lahar\OneDrive\Pictures\Saved Pictures\LFSR1.circ" name="10"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -353,204 +352,202 @@
     <wire from="(350,60)" to="(350,120)"/>
     <wire from="(720,270)" to="(720,320)"/>
     <wire from="(1070,1450)" to="(1070,1560)"/>
-    <comp lib="1" loc="(30,590)" name="NOT Gate">
+    <comp lib="1" loc="(730,1730)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="6" loc="(1042,226)" name="Text">
-      <a name="text" val="Sadipirala Basitha 231CS251"/>
-      <a name="font" val="SansSerif italic 20"/>
+    <comp lib="6" loc="(217,1424)" name="Text">
+      <a name="text" val="Use switches (Switch1, Switch2, Switch3) to input 5-bit data for each level."/>
     </comp>
-    <comp lib="6" loc="(54,1447)" name="Text">
-      <a name="text" val="2.Fault Detection: "/>
-      <a name="font" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="6" loc="(825,1060)" name="Text">
-      <a name="text" val="5-BIT INPUT"/>
-    </comp>
-    <comp lib="1" loc="(490,1140)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="6" loc="(221,1482)" name="Text">
-      <a name="text" val="For other levels, the expected output is left-shifted from the previous level. "/>
-    </comp>
-    <comp lib="6" loc="(991,994)" name="Text">
-      <a name="text" val="FOR LEVEL 3"/>
-    </comp>
-    <comp lib="1" loc="(180,820)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="6" loc="(256,363)" name="Text">
-      <a name="text" val="FOR LEVEL  1"/>
-    </comp>
-    <comp lib="5" loc="(450,1230)" name="LED">
-      <a name="facing" val="north"/>
-      <a name="label" val="O2"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="1" loc="(390,60)" name="NOT Gate">
-      <a name="facing" val="south"/>
+    <comp lib="6" loc="(112,1703)" name="Text">
+      <a name="text" val="Dark Green LED: Subsystem working."/>
     </comp>
     <comp lib="6" loc="(63,1579)" name="Text">
       <a name="text" val="1: Attempt recovery."/>
     </comp>
-    <comp lib="1" loc="(450,1140)" name="NOT Gate">
-      <a name="facing" val="south"/>
+    <comp lib="10" loc="(40,200)" name="main"/>
+    <comp lib="6" loc="(146,1654)" name="Text">
+      <a name="text" val="Non-crucial: Bit set to 0 (non-working state/OFF)."/>
     </comp>
-    <comp lib="1" loc="(1050,1790)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
+    <comp lib="6" loc="(22,1892)" name="Text">
+      <a name="text" val="NOTE:"/>
+      <a name="font" val="SansSerif bolditalic 12"/>
     </comp>
-    <comp lib="3" loc="(840,350)" name="Shifter">
-      <a name="width" val="5"/>
+    <comp lib="6" loc="(219,1020)" name="Text">
+      <a name="text" val="s21"/>
     </comp>
-    <comp lib="1" loc="(470,1140)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(830,1430)" name="AND Gate">
+    <comp lib="1" loc="(470,820)" name="AND Gate">
       <a name="facing" val="south"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="6" loc="(1022,180)" name="Text">
-      <a name="text" val="Aalima Khan 231CS201"/>
+    <comp lib="6" loc="(1020,203)" name="Text">
+      <a name="text" val="Bukke Lahari 231CS217"/>
       <a name="font" val="SansSerif italic 20"/>
     </comp>
-    <comp lib="5" loc="(690,1820)" name="LED">
-      <a name="facing" val="north"/>
-      <a name="label" val="O3"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="0" loc="(780,1030)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="SWITCH3"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(670,150)" name="Splitter">
+    <comp lib="1" loc="(70,590)" name="NOT Gate">
       <a name="facing" val="south"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
-    </comp>
-    <comp lib="6" loc="(1154,63)" name="Text">
-      <a name="text" val="FAULT TOLERANCE IN SPACECRAFTS"/>
-      <a name="font" val="SansSerif bold 26"/>
-    </comp>
-    <comp lib="6" loc="(149,1465)" name="Text">
-      <a name="text" val="For Level 1, the expected 5-bit output is constant. "/>
-    </comp>
-    <comp lib="6" loc="(147,1739)" name="Text">
-      <a name="text" val="Black LED (Red Wire): The user skipped recovery."/>
-    </comp>
-    <comp lib="5" loc="(650,1820)" name="LED">
-      <a name="facing" val="north"/>
-      <a name="label" val="O1"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="0" loc="(360,440)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="SWITCH2"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="1" loc="(430,1140)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="5" loc="(510,1230)" name="LED">
-      <a name="facing" val="north"/>
-      <a name="label" val="O5"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="6" loc="(70,1524)" name="Text">
-      <a name="text" val="3.Subsystem Recovery:"/>
-      <a name="font" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(400,140)" name="Splitter">
-      <a name="facing" val="north"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
-    </comp>
-    <comp lib="1" loc="(570,820)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(510,1140)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="6" loc="(152,1921)" name="Text">
-      <a name="text" val="on each other whether subsystem is crucial or not"/>
-    </comp>
-    <comp lib="10" loc="(770,1090)" name="main"/>
-    <comp lib="1" loc="(600,1180)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="5" loc="(90,680)" name="LED">
-      <a name="facing" val="north"/>
-      <a name="label" val="O5"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="6" loc="(130,208)" name="Text">
-      <a name="text" val="5-BIT INPUT"/>
-    </comp>
-    <comp lib="6" loc="(739,570)" name="Text">
-      <a name="text" val="5-BIT EXPECTED OUTPUT"/>
-    </comp>
-    <comp lib="1" loc="(1050,1430)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(410,160)" name="Pin">
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="LEFT SHIFT BY 001"/>
-    </comp>
-    <comp lib="6" loc="(845,1757)" name="Text">
-      <a name="text" val="BLACK WITH GREEN WIRE: "/>
-    </comp>
-    <comp lib="6" loc="(48,1769)" name="Text">
-      <a name="text" val="5.Progression:"/>
-      <a name="font" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="6" loc="(154,1719)" name="Text">
-      <a name="text" val="Red LED (Light Green Wire): Subsystem not working."/>
-    </comp>
-    <comp lib="6" loc="(61,1811)" name="Text">
-      <a name="text" val="6.Mission Success:"/>
-      <a name="font" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="6" loc="(52,1591)" name="Text">
-      <a name="text" val="0: Skip recovery."/>
     </comp>
     <comp lib="5" loc="(30,680)" name="LED">
       <a name="facing" val="north"/>
       <a name="label" val="O2"/>
       <a name="labelloc" val="south"/>
     </comp>
+    <comp lib="1" loc="(510,1140)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(61,1811)" name="Text">
+      <a name="text" val="6.Mission Success:"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="1" loc="(570,820)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(154,1719)" name="Text">
+      <a name="text" val="Red LED (Light Green Wire): Subsystem not working."/>
+    </comp>
+    <comp lib="1" loc="(600,1180)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="5" loc="(840,1800)" name="LED">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(129,221)" name="Text">
+      <a name="text" val="FOR LEVEL 1"/>
+    </comp>
+    <comp lib="0" loc="(410,160)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="LEFT SHIFT BY 001"/>
+    </comp>
+    <comp lib="6" loc="(247,1785)" name="Text">
+      <a name="text" val="Proceeds to the next level if crucial bits are corrected. If not, the mission terminates."/>
+    </comp>
+    <comp lib="6" loc="(1027,976)" name="Text">
+      <a name="text" val="5-BIT EXPECTED OUTPUT"/>
+    </comp>
+    <comp lib="6" loc="(130,208)" name="Text">
+      <a name="text" val="5-BIT INPUT"/>
+    </comp>
+    <comp lib="6" loc="(991,994)" name="Text">
+      <a name="text" val="FOR LEVEL 3"/>
+    </comp>
+    <comp lib="1" loc="(940,1430)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(369,414)" name="Text">
+      <a name="text" val="SWITCH2"/>
+    </comp>
+    <comp lib="6" loc="(704,582)" name="Text">
+      <a name="text" val="FOR LEVEL  2"/>
+    </comp>
+    <comp lib="9" loc="(1020,1560)" name="main"/>
     <comp lib="5" loc="(670,1820)" name="LED">
       <a name="facing" val="north"/>
       <a name="label" val="O2"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="1" loc="(10,590)" name="NOT Gate">
+    <comp lib="6" loc="(52,1591)" name="Text">
+      <a name="text" val="0: Skip recovery."/>
+    </comp>
+    <comp lib="5" loc="(430,1230)" name="LED">
+      <a name="facing" val="north"/>
+      <a name="label" val="O1"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="6" loc="(789,1004)" name="Text">
+      <a name="text" val="SWITCH3"/>
+    </comp>
+    <comp lib="1" loc="(470,1140)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="5" loc="(840,1800)" name="LED">
+    <comp lib="6" loc="(825,1060)" name="Text">
+      <a name="text" val="5-BIT INPUT"/>
+    </comp>
+    <comp lib="1" loc="(710,1730)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="5" loc="(470,1230)" name="LED">
+    <comp lib="5" loc="(50,680)" name="LED">
       <a name="facing" val="north"/>
       <a name="label" val="O3"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="1" loc="(730,1730)" name="NOT Gate">
+    <comp lib="6" loc="(54,1447)" name="Text">
+      <a name="text" val="2.Fault Detection: "/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(152,1921)" name="Text">
+      <a name="text" val="on each other whether subsystem is crucial or not"/>
+    </comp>
+    <comp lib="7" loc="(120,460)" name="main"/>
+    <comp lib="1" loc="(160,660)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="4"/>
+    </comp>
+    <comp lib="10" loc="(370,570)" name="main"/>
+    <comp lib="1" loc="(30,590)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="6" loc="(843,1771)" name="Text">
-      <a name="text" val="MISSION SUCCESSFUL"/>
+    <comp lib="1" loc="(280,820)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="5" loc="(360,440)" name="Button">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(450,1140)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(690,1730)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(400,140)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
     </comp>
     <comp lib="5" loc="(730,1820)" name="LED">
       <a name="facing" val="north"/>
       <a name="label" val="O5"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="6" loc="(475,583)" name="Text">
+      <a name="text" val="FOR LEVEL 2"/>
+    </comp>
+    <comp lib="5" loc="(690,1820)" name="LED">
+      <a name="facing" val="north"/>
+      <a name="label" val="O3"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="6" loc="(149,1465)" name="Text">
+      <a name="text" val="For Level 1, the expected 5-bit output is constant. "/>
+    </comp>
+    <comp lib="6" loc="(72,1404)" name="Text">
+      <a name="text" val="1.Set Subsystem Inputs: "/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(474,569)" name="Text">
+      <a name="text" val="5-BIT INPUT"/>
+    </comp>
+    <comp lib="6" loc="(221,1482)" name="Text">
+      <a name="text" val="For other levels, the expected output is left-shifted from the previous level. "/>
+    </comp>
+    <comp lib="5" loc="(10,680)" name="LED">
+      <a name="facing" val="north"/>
+      <a name="label" val="O1"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="0" loc="(320,20)" name="Constant"/>
+    <comp lib="1" loc="(650,1730)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(640,1570)" name="Button">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(450,1230)" name="LED">
+      <a name="facing" val="north"/>
+      <a name="label" val="O2"/>
       <a name="labelloc" val="south"/>
     </comp>
     <comp lib="0" loc="(890,350)" name="Splitter">
@@ -558,209 +555,214 @@
       <a name="fanout" val="5"/>
       <a name="incoming" val="5"/>
     </comp>
-    <comp lib="5" loc="(430,1230)" name="LED">
-      <a name="facing" val="north"/>
-      <a name="label" val="O1"/>
-      <a name="labelloc" val="south"/>
+    <comp lib="6" loc="(294,349)" name="Text">
+      <a name="text" val="5-BIT EXPECTED OUTPUT"/>
     </comp>
-    <comp lib="0" loc="(690,1570)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="s3.2"/>
+    <comp lib="6" loc="(843,1771)" name="Text">
+      <a name="text" val="MISSION SUCCESSFUL"/>
     </comp>
-    <comp lib="0" loc="(250,1030)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="s2.1"/>
-    </comp>
-    <comp lib="1" loc="(470,820)" name="AND Gate">
+    <comp lib="1" loc="(380,820)" name="AND Gate">
       <a name="facing" val="south"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="6" loc="(217,1424)" name="Text">
-      <a name="text" val="Use switches (Switch1, Switch2, Switch3) to input 5-bit data for each level."/>
-    </comp>
-    <comp lib="0" loc="(50,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="SWITCH1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="7" loc="(120,460)" name="main"/>
-    <comp lib="5" loc="(490,1230)" name="LED">
-      <a name="facing" val="north"/>
-      <a name="label" val="O4"/>
-      <a name="labelloc" val="south"/>
+    <comp lib="3" loc="(840,350)" name="Shifter">
+      <a name="width" val="5"/>
     </comp>
     <comp lib="6" loc="(982,151)" name="Text">
       <a name="text" val="TEAM DETAILS:"/>
       <a name="font" val="SansSerif italic 20"/>
     </comp>
-    <comp lib="6" loc="(322,1545)" name="Text">
-      <a name="text" val="Crucial Subsystems: Automatically attempts recovery (the first bit is uncorrectable, next three are correctable)."/>
+    <comp lib="6" loc="(194,1499)" name="Text">
+      <a name="text" val="A fault is detected if the input doesn't match the expected output. "/>
     </comp>
-    <comp lib="6" loc="(247,1785)" name="Text">
-      <a name="text" val="Proceeds to the next level if crucial bits are corrected. If not, the mission terminates."/>
+    <comp lib="5" loc="(650,1820)" name="LED">
+      <a name="facing" val="north"/>
+      <a name="label" val="O1"/>
+      <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="6" loc="(294,349)" name="Text">
-      <a name="text" val="5-BIT EXPECTED OUTPUT"/>
+    <comp lib="5" loc="(470,1230)" name="LED">
+      <a name="facing" val="north"/>
+      <a name="label" val="O3"/>
+      <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="6" loc="(58,1621)" name="Text">
-      <a name="text" val="Recovery Meaning:"/>
+    <comp lib="6" loc="(845,1757)" name="Text">
+      <a name="text" val="BLACK WITH GREEN WIRE: "/>
     </comp>
-    <comp lib="6" loc="(826,1080)" name="Text">
-      <a name="text" val="FOR LEVEL 3"/>
+    <comp lib="5" loc="(490,1230)" name="LED">
+      <a name="facing" val="north"/>
+      <a name="label" val="O4"/>
+      <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="1" loc="(670,1730)" name="NOT Gate">
+    <comp lib="1" loc="(830,1430)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(180,820)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(59,153)" name="Text">
+      <a name="text" val="SWITCH1"/>
+    </comp>
+    <comp lib="6" loc="(256,363)" name="Text">
+      <a name="text" val="FOR LEVEL  1"/>
+    </comp>
+    <comp lib="5" loc="(690,1570)" name="Button">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="6" loc="(1020,203)" name="Text">
-      <a name="text" val="Bukke Lahari 231CS217"/>
-      <a name="font" val="SansSerif italic 20"/>
+    <comp lib="5" loc="(510,1230)" name="LED">
+      <a name="facing" val="north"/>
+      <a name="label" val="O5"/>
+      <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="6" loc="(151,1827)" name="Text">
-      <a name="text" val="If all levels pass, the Mission Success LED lights up."/>
+    <comp lib="5" loc="(710,1820)" name="LED">
+      <a name="facing" val="north"/>
+      <a name="label" val="O4"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="6" loc="(48,1769)" name="Text">
+      <a name="text" val="5.Progression:"/>
+      <a name="font" val="SansSerif bold 12"/>
     </comp>
     <comp lib="6" loc="(64,1368)" name="Text">
       <a name="text" val="INSTRUCTIONS "/>
       <a name="font" val="SansSerif bolditalic 16"/>
     </comp>
-    <comp lib="6" loc="(474,569)" name="Text">
-      <a name="text" val="5-BIT INPUT"/>
+    <comp lib="6" loc="(151,1827)" name="Text">
+      <a name="text" val="If all levels pass, the Mission Success LED lights up."/>
+    </comp>
+    <comp lib="6" loc="(147,1739)" name="Text">
+      <a name="text" val="Black LED (Red Wire): The user skipped recovery."/>
+    </comp>
+    <comp lib="5" loc="(90,680)" name="LED">
+      <a name="facing" val="north"/>
+      <a name="label" val="O5"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="6" loc="(739,570)" name="Text">
+      <a name="text" val="5-BIT EXPECTED OUTPUT"/>
     </comp>
     <comp lib="5" loc="(70,680)" name="LED">
       <a name="facing" val="north"/>
       <a name="label" val="O4"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="6" loc="(606,117)" name="Text">
-      <a name="text" val="SHIFTER LEFT SHIFTS EXPECTED OUTPUT OF LEVEL 1(11110) BY  1"/>
-    </comp>
-    <comp lib="6" loc="(194,1499)" name="Text">
-      <a name="text" val="A fault is detected if the input doesn't match the expected output. "/>
-    </comp>
-    <comp lib="6" loc="(704,582)" name="Text">
-      <a name="text" val="FOR LEVEL  2"/>
-    </comp>
-    <comp lib="6" loc="(22,1892)" name="Text">
-      <a name="text" val="NOTE:"/>
-      <a name="font" val="SansSerif bolditalic 12"/>
-    </comp>
-    <comp lib="1" loc="(730,1430)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(690,1730)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="8" loc="(560,950)" name="main"/>
-    <comp lib="5" loc="(710,1820)" name="LED">
-      <a name="facing" val="north"/>
-      <a name="label" val="O4"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="6" loc="(216,1910)" name="Text">
-      <a name="text" val="The correction within each level  all the 4 subsystems(From LHS) depends"/>
-    </comp>
-    <comp lib="5" loc="(10,680)" name="LED">
-      <a name="facing" val="north"/>
-      <a name="label" val="O1"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="1" loc="(380,820)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="6" loc="(129,221)" name="Text">
-      <a name="text" val="FOR LEVEL 1"/>
-    </comp>
-    <comp lib="1" loc="(930,1890)" name="NOT Gate">
+    <comp lib="5" loc="(50,180)" name="Button">
       <a name="facing" val="west"/>
-    </comp>
-    <comp lib="6" loc="(213,1561)" name="Text">
-      <a name="text" val="Non-crucial Subsystems: Use small switches (s1.x, s2.x, s3.x) to decide:"/>
-    </comp>
-    <comp lib="6" loc="(1027,976)" name="Text">
-      <a name="text" val="5-BIT EXPECTED OUTPUT"/>
-    </comp>
-    <comp lib="1" loc="(280,820)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="6" loc="(146,1654)" name="Text">
-      <a name="text" val="Non-crucial: Bit set to 0 (non-working state/OFF)."/>
-    </comp>
-    <comp lib="6" loc="(133,1640)" name="Text">
-      <a name="text" val="Crucial: Bit restored to 1 (working state/ON)."/>
-    </comp>
-    <comp lib="6" loc="(57,1681)" name="Text">
-      <a name="text" val="4.Monitor Status:"/>
-      <a name="font" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="9" loc="(1020,1560)" name="main"/>
-    <comp lib="6" loc="(72,1404)" name="Text">
-      <a name="text" val="1.Set Subsystem Inputs: "/>
-      <a name="font" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(640,1570)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="s3.1"/>
-    </comp>
-    <comp lib="1" loc="(710,1730)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(90,590)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(320,20)" name="Constant"/>
-    <comp lib="3" loc="(580,150)" name="Shifter">
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="6" loc="(112,1703)" name="Text">
-      <a name="text" val="Dark Green LED: Subsystem working."/>
-    </comp>
-    <comp lib="1" loc="(620,1430)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="6" loc="(475,583)" name="Text">
-      <a name="text" val="FOR LEVEL 2"/>
-    </comp>
-    <comp lib="10" loc="(40,200)" name="main"/>
-    <comp lib="1" loc="(160,660)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="inputs" val="4"/>
-    </comp>
-    <comp lib="6" loc="(932,313)" name="Text">
-      <a name="text" val="SHIFTER LEFT SHIFTS EXPECTED OUTPUT OF LEVEL 2(11100) BY  1"/>
     </comp>
     <comp lib="0" loc="(730,340)" name="Splitter">
       <a name="facing" val="north"/>
       <a name="fanout" val="5"/>
       <a name="incoming" val="5"/>
     </comp>
-    <comp lib="1" loc="(70,590)" name="NOT Gate">
-      <a name="facing" val="south"/>
+    <comp lib="6" loc="(932,313)" name="Text">
+      <a name="text" val="SHIFTER LEFT SHIFTS EXPECTED OUTPUT OF LEVEL 2(11100) BY  1"/>
     </comp>
-    <comp lib="1" loc="(940,1430)" name="AND Gate">
+    <comp lib="1" loc="(620,1430)" name="AND Gate">
       <a name="facing" val="south"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="6" loc="(203,1844)" name="Text">
-      <a name="text" val="If any crucial subsystem fails, the mission fails, and the system stops."/>
+    <comp lib="6" loc="(1042,226)" name="Text">
+      <a name="text" val="Sadipirala Basitha 231CS251"/>
+      <a name="font" val="SansSerif italic 20"/>
     </comp>
-    <comp lib="1" loc="(650,1730)" name="NOT Gate">
+    <comp lib="1" loc="(490,1140)" name="NOT Gate">
       <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(216,1910)" name="Text">
+      <a name="text" val="The correction within each level  all the 4 subsystems(From LHS) depends"/>
+    </comp>
+    <comp lib="6" loc="(613,1567)" name="Text">
+      <a name="text" val="s31"/>
+    </comp>
+    <comp lib="5" loc="(780,1030)" name="Button">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(430,1140)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(57,1681)" name="Text">
+      <a name="text" val="4.Monitor Status:"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="1" loc="(1050,1430)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="3" loc="(580,150)" name="Shifter">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="1" loc="(90,590)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(250,1030)" name="Button">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(670,150)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+    </comp>
+    <comp lib="6" loc="(666,1561)" name="Text">
+      <a name="text" val="s32"/>
+    </comp>
+    <comp lib="1" loc="(390,60)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(10,590)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(58,1621)" name="Text">
+      <a name="text" val="Recovery Meaning:"/>
+    </comp>
+    <comp lib="1" loc="(670,1730)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="10" loc="(770,1090)" name="main"/>
+    <comp lib="6" loc="(133,1640)" name="Text">
+      <a name="text" val="Crucial: Bit restored to 1 (working state/ON)."/>
+    </comp>
+    <comp lib="1" loc="(730,1430)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(70,1524)" name="Text">
+      <a name="text" val="3.Subsystem Recovery:"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="1" loc="(930,1890)" name="NOT Gate">
+      <a name="facing" val="west"/>
     </comp>
     <comp lib="1" loc="(50,590)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="10" loc="(370,570)" name="main"/>
-    <comp lib="5" loc="(50,680)" name="LED">
-      <a name="facing" val="north"/>
-      <a name="label" val="O3"/>
-      <a name="labelloc" val="south"/>
+    <comp lib="6" loc="(826,1080)" name="Text">
+      <a name="text" val="FOR LEVEL 3"/>
     </comp>
+    <comp lib="1" loc="(1050,1790)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(606,117)" name="Text">
+      <a name="text" val="SHIFTER LEFT SHIFTS EXPECTED OUTPUT OF LEVEL 1(11110) BY  1"/>
+    </comp>
+    <comp lib="6" loc="(213,1561)" name="Text">
+      <a name="text" val="Non-crucial Subsystems: Use small switches (s1.x, s2.x, s3.x) to decide:"/>
+    </comp>
+    <comp lib="6" loc="(322,1545)" name="Text">
+      <a name="text" val="Crucial Subsystems: Automatically attempts recovery (the first bit is uncorrectable, next three are correctable)."/>
+    </comp>
+    <comp lib="6" loc="(1154,63)" name="Text">
+      <a name="text" val="FAULT TOLERANCE IN SPACECRAFTS"/>
+      <a name="font" val="SansSerif bold 26"/>
+    </comp>
+    <comp lib="6" loc="(203,1844)" name="Text">
+      <a name="text" val="If any crucial subsystem fails, the mission fails, and the system stops."/>
+    </comp>
+    <comp lib="6" loc="(1022,180)" name="Text">
+      <a name="text" val="Aalima Khan 231CS201"/>
+      <a name="font" val="SansSerif italic 20"/>
+    </comp>
+    <comp lib="8" loc="(560,950)" name="main"/>
   </circuit>
 </project>
