@@ -85,7 +85,8 @@
 
 <details>
   <summary>Verilog Code</summary>
- [View Verilog Code](path-to-your-verilog-file.v)
+ -[S2-T11.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/S2-T11.v)
+ -[S2-T11_tb.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/S2-T11_tb.v)
 
 </details>
 
