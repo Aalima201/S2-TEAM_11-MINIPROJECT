@@ -43,7 +43,7 @@
   
   
   
-  ![Functional Block Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/hello.drawio.png) 
+  ![Functional Block Diagram](BLOCK DIAGRAM.jpg) 
   
 
   
