@@ -43,7 +43,7 @@
   
   
   
-  ![Functional Block Diagram](BLOCK DIAGRAM.jpg) 
+  ![Functional Block Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/dc506859d98447869a3ee16a65bf65c76506f86d/BLOCK%20DIAGRAM.jpg) 
   
 
   
