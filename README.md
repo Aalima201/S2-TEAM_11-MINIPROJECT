@@ -89,6 +89,7 @@
 
 - [S2-T11-data.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11-data.v)
 - [S2-T11_tb.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11_tb.v)
+![S2-T11(output).png](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11(output).png)
 - Usage:
 - To run the program, execute commands in the terminal:
 
