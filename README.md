@@ -21,7 +21,7 @@
 
 ---
 
-<Verilog>
+</details>
   <summary>Abstract</summary>
   
  
@@ -83,8 +83,9 @@
 ---
 
 <details>
+  <summary>Verilog</summary>
   
-  
+
 - [S2-T11-data.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11-data.v)
 - [S2-T11_tb.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11_tb.v)
 - Usage:
