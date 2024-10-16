@@ -82,8 +82,7 @@ LEVEL 1 ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MIN
 
 ---
 
-<details>
-  ##Verilog
+<Verilog>
 Usage:
 To run the program, execute commands in the terminal:
 
