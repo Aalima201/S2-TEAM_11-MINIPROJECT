@@ -66,11 +66,11 @@
   
   
   
-  MAIN![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/S2-T11.png)
-  ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level1Image.png)
-  ![LEVEL 2 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level2Image.png)
-  ![LEVEL 3 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level3.Image.png)
-  ![LFSR Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/LFSRImage.png)
+  MAIN CIRCUIT![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/S2-T11.png)
+ LEVEL 1 ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level1Image.png)
+ LEVEL 2 ![LEVEL 2 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level2Image.png)
+ LEVEL 3 ![LEVEL 3 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level3.Image.png)
+ LFSR ![LFSR Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/LFSRImage.png)
   
   - [Brief description about logisim circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Design-Logisim.pdf)
   - [Download LFSR Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/LFSR.circ)
@@ -85,8 +85,8 @@
 
 <details>
   <summary>Verilog Code</summary>
-![S2-T11.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/3ec8f1a2fd70f158aaa2e206ad244defedca98b7/Verilog/S2-T11.v)
- ![S2-T11_tb.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/7ae0194218c507ec70d87456cb1182a0a165107d/Verilog/S2-T11_tb.v)
+CODE https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/3ec8f1a2fd70f158aaa2e206ad244defedca98b7/Verilog/S2-T11.v
+ https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/7ae0194218c507ec70d87456cb1182a0a165107d/Verilog/S2-T11_tb.v
  
 
 </details>
