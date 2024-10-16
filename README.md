@@ -85,8 +85,8 @@
 
 <details>
   <summary>Verilog Code</summary>
-CODE https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/3ec8f1a2fd70f158aaa2e206ad244defedca98b7/Verilog/S2-T11.v
- https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/7ae0194218c507ec70d87456cb1182a0a165107d/Verilog/S2-T11_tb.v
+
+
  
 
 </details>
