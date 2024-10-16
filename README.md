@@ -89,8 +89,9 @@
 
 - [S2-T11-data.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11-data.v)
 - [S2-T11_tb.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11_tb.v)
+  ### Output
 ![S2-T11(output).png](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11(output).png)
-- Usage:
+### Usage
 - To run the program, execute commands in the terminal:
 
 ```bash
@@ -101,50 +102,6 @@ iverilog -o dds S2-T11_tb.v S2-T11-data.v
 vvp dds
 ```
 
-### Output-1
-  
-```bash
-Level 1 Inputs: R1L1=1 R2L1=0 R3L1=0 R4L1=0 R5L1=1 EL1=11110
-Level 1 Passed: O1L1=1 O2L1=1 O3L1=1 O4L1=1 O5L1=1
-Level 2 running...
-Level 2 Inputs: R1L2=1 R2L2=1 R3L2=0 R4L2=0 R5L2=0 EL2=11100
-User chose not to switch off the 4th bit. O4L2=0
-Level 2 Passed: O1L2=1 O2L2=1 O3L2=1 O4L2=0 O5L2=0
-Level 3 running...
-Level 3 Inputs: R1L3=1 R2L3=1 R3L3=0 R4L3=0 R5L3=0 EL3=11000
-User chose not to switch off the 3rd bit. O3L3=0
-User asked to switch off 4th bit. O4L3 set to 0.
-Level 3 Passed: O1L3=1 O2L3=1 O3L3=0 O4L3=0 O5L3=0
-MISSION SUCCESSFUL!
-  
------------------------------
-```
-
-### Output-2
-```bash
-Level 1 Inputs: R1L1=0 R2L1=1 R3L1=1 R4L1=0 R5L1=0 EL1=11110
-Level 1 Failed!
-MISSION ABORTED!
-
------------------------------
-```
-### Output-3
-```bash
-Level 1 Inputs: R1L1=1 R2L1=0 R3L1=1 R4L1=1 R5L1=0 EL1=11110
-Level 1 Passed: O1L1=1 O2L1=1 O3L1=1 O4L1=1 O5L1=0
-Level 2 running...
-Level 2 Inputs: R1L2=1 R2L2=1 R3L2=0 R4L2=1 R5L2=1 EL2=11100
-User asked to switch off 4th bit. O4L2 set to 0.
-Level 2 Passed: O1L2=1 O2L2=1 O3L2=1 O4L2=0 O5L2=1
-Level 3 running...
-Level 3 Inputs: R1L3=1 R2L3=1 R3L3=0 R4L3=1 R5L3=1 EL3=11000
-User asked to switch off 3rd bit. O3L3 set to 0.
-User asked to switch off 4th bit. O4L3 set to 0.
-Level 3 Passed: O1L3=1 O2L3=1 O3L3=0 O4L3=0 O5L3=1
-MISSION SUCCESSFUL!
-
------------------------------
-```
 </details>
 
 ---
