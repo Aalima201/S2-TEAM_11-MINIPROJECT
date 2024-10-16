@@ -54,7 +54,7 @@
 <details>
   <summary>Working</summary>
   
-   - [Click here](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Design-Logisim.pdf)
+   - [Click here](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/WORKING.pdf)
   
 </details>
 
