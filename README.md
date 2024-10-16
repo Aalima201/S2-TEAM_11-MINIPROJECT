@@ -83,6 +83,7 @@ LEVEL 1 ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MIN
 ---
 
 <Verilog>
+![S2-T11-data.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11-data.v)
 Usage:
 To run the program, execute commands in the terminal:
 
