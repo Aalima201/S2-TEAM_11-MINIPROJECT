@@ -85,41 +85,42 @@
 
 <details>
   <summary>Verilog Code</summary>
-
-module spacecraft_fault_tolerance_tb;
+  TEST BENCH
+  
+    module spacecraft_fault_tolerance_tb;
     reg clk;
     reg rst;
 
-  // Inputs for Level 1
+    // Inputs for Level 1
     reg R1, R2, R3, R4, R5;
     reg [4:0] E; // Register for E
     wire O1, O2, O3, O4, O5;
     wire LEVEL1_PASSED;
 
-  // Inputs for Level 2
+    // Inputs for Level 2
     reg SWITCH1L2;
     reg userR4L2;
     wire O1L2, O2L2, O3L2, O4L2, O5L2;
     wire LEVEL2_PASSED;
 
-  // Inputs for Level 3
+    // Inputs for Level 3
     reg SWITCH1L3, SWITCH2L3;
     reg userR3L3, userR4L3;
     wire O1L3, O2L3, O3L3, O4L3, O5L3;
     wire LEVEL3_PASSED;
 
-  // Declare temporary registers for Level 2 and Level 3 outputs
+    // Declare temporary registers for Level 2 and Level 3 outputs
     reg O4L2_reg; // Temporary register for Level 2 O4
     reg O3L3_reg; // Temporary register for Level 3 O3
     reg O4L3_reg; // Temporary register for Level 3 O4
 
-  // Instantiate LFSR for random number generation
+    // Instantiate LFSR for random number generation
     reg [4:0] lfsr;
 
-  // Clock generation
+    // Clock generation
     always #5 clk = ~clk;
 
-  // LFSR for generating pseudo-random numbers
+    // LFSR for generating pseudo-random numbers
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             lfsr <= 5'b10011; // Initial seed
@@ -128,12 +129,12 @@ module spacecraft_fault_tolerance_tb;
         end
     end
 
-  // Assign initial value for E (for Level 1)
+    // Assign initial value for E (for Level 1)
     initial begin
         E = 5'b11110; // Set a constant value for E for Level 1
     end
 
-  // Assign random inputs based on LFSR output
+    // Assign random inputs based on LFSR output
     always @(posedge clk) begin
         if (!rst) begin
             // Generate random inputs for Level 1
@@ -145,7 +146,7 @@ module spacecraft_fault_tolerance_tb;
         end
     end
 
-  // Instantiate Level 1
+    // Instantiate Level 1
     gate_level1 level1_inst (
         .R1(R1), .R2(R2), .R3(R3), .R4(R4), .R5(R5),
         .E1(E[4]), .E2(E[3]), .E3(E[2]), .E4(E[1]), .E5(E[0]),
@@ -153,7 +154,7 @@ module spacecraft_fault_tolerance_tb;
         .LEVEL1_PASSED(LEVEL1_PASSED)
     );
 
-  // Instantiate Level 2
+    // Instantiate Level 2
     gate_level2 level2_inst (
         .clk(clk), .rst(rst),
         .E1L2(E[4]), .E2L2(E[3]), .E3L2(E[2]), .E4L2(E[1]), .E5L2(E[0]),
@@ -162,7 +163,7 @@ module spacecraft_fault_tolerance_tb;
         .LEVEL2_PASSED(LEVEL2_PASSED)
     );
 
-  // Instantiate Level 3
+    // Instantiate Level 3
     gate_level3 level3_inst (
         .clk(clk), .rst(rst),
         .E1L3(E[4]), .E2L3(E[3]), .E3L3(E[2]), .E4L3(E[1]), .E5L3(E[0]),
@@ -270,7 +271,7 @@ module spacecraft_fault_tolerance_tb;
         end
         $finish;
     end
-endmodule
+    endmodule
 </details>
 
 ---
