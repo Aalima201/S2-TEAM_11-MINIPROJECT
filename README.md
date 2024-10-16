@@ -25,7 +25,7 @@
   <summary>Abstract</summary>
   
  
-  -[Updated Abstract](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Fault%20Tolerance%20in%20Spacecrafts(ABSTRACT).pdf) 
+  -[Updated Abstract](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/Fault%20Tolerance%20in%20Spacecrafts(ABSTRACT).pdf) 
   
 </details>
 
@@ -33,7 +33,7 @@
 <details>
   <summary>Flowchart</summary>
   
-  ![Flowchart referred for project](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Screenshot%202024-10-08%20at%2011.45.14%20AM.png) 
+  ![Flowchart referred for project](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/TechnicalArchitecture.png) 
   
 </details>
 
@@ -43,7 +43,7 @@
   
   
   
-  ![Functional Block Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/dc506859d98447869a3ee16a65bf65c76506f86d/BLOCK%20DIAGRAM.jpg) 
+  ![Functional Block Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/BLOCK%20DIAGRAM.jpg) 
   
 
   
@@ -66,18 +66,18 @@
   
   
   
-  ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/S2-T11.png)
-  ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Level1Image.png)
-  ![LEVEL 2 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Level2Image.png)
-  ![LEVEL 3 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Level3.Image.png)
-  ![LFSR Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/LFSRImage.png)
+  ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/S2-T11.png)
+  ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level1Image.png)
+  ![LEVEL 2 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level2Image.png)
+  ![LEVEL 3 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level3.Image.png)
+  ![LFSR Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/LFSRImage.png)
   
-  - [Brief description about logisim circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Design-Logisim.pdf)
-  - [Download LFSR Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/LFSR1.circ)
-  - [Download Level 1 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/level1copy.circ)
-  - [Download Level 2 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/level2.circ)
-  - [Download Level3 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/level3.circ)
-  - [Download Logisim Final Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/S2-T11.circ)
+  - [Brief description about logisim circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Design-Logisim.pdf)
+  - [Download LFSR Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/LFSR.circ)
+  - [Download Level 1 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/level1.circ)
+  - [Download Level 2 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/level2.circ)
+  - [Download Level3 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/level3.circ)
+  - [Download Logisim Final Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/S2-T11.circ)
   
 </details>
 
@@ -85,8 +85,8 @@
 
 <details>
   <summary>Verilog Code</summary>
- ![S2-T11.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/S2-T11.v)
- ![S2-T11_tb.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/S2-T11_tb.v)
+ ![S2-T11.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11.v)
+ ![S2-T11_tb.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11_tb.v)
 
 </details>
 
