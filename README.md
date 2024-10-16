@@ -25,7 +25,7 @@
   <summary>Abstract</summary>
   
  
-  ![Updated Abstract](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/Fault%20Tolerance%20in%20Spacecrafts(ABSTRACT).pdf) 
+  -[click here](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/Fault%20Tolerance%20in%20Spacecrafts(ABSTRACT).pdf) 
   
 </details>
 
@@ -54,7 +54,7 @@
 <details>
   <summary>Working</summary>
   
-  ![Working](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/WORKING.pdf)
+  -[click here](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/WORKING.pdf)
   
 </details>
 
