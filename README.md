@@ -85,7 +85,7 @@
 
 <details>
   <summary>Verilog Code</summary>
- ![S2-T11.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11.v)
+ ![S2-T11.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/3ec8f1a2fd70f158aaa2e206ad244defedca98b7/Verilog/S2-T11.v)
  ![S2-T11_tb.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11_tb.v)
 
 </details>
