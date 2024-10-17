@@ -172,13 +172,6 @@ Level2_passed = O1.O2.O3
 ### LFSR 
 ![LFSR Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/LFSRImage.png)
   
-  - [Brief description about logisim circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Design-Logisim.pdf)
-  - [Download LFSR Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/LFSR.circ)
-  - [Download Level 1 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/level1.circ)
-  - [Download Level 2 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/level2.circ)
-  - [Download Level3 Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/level3.circ)
-  - [Download Logisim Final Circuit](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit/S2-T11.circ)
-  
 </details>
 
 <!-- Sixth Section -->
@@ -187,23 +180,682 @@ Level2_passed = O1.O2.O3
 <details>
   <summary>Verilog</summary>
   
+  ### Gate Flow
+    module lfsr_5bit (
+    input clk,    // Clock input
+    input rst,    // Reset input
+    output reg [4:0] lfsr_out  // 5-bit output
+    );
 
-- [S2-T11-data.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11-data.v)
-- [S2-T11-gate.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11-gate.v)
-- [S2-T11_tb.v](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11_tb.v)
-  ### Output
-![S2-T11(output).png](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Verilog/S2-T11(output).png)
-### Usage
-- To run the program, execute commands in the terminal:
+    wire feedback;
 
-```bash
-iverilog -o dds S2-T11_tb.v S2-T11-data.v
-```
+    // Feedback is taken from bits 5 and 3 (tap positions 4 and 2 in Verilog, 0-indexed)
+    assign feedback = ~(lfsr_out[4] ^ lfsr_out[2]); 
 
-```bash
-vvp dds
-```
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            // On reset, set LFSR to a non-zero seed value
+            lfsr_out <= 5'b00001;
+        end else begin
+            // Shift the LFSR and insert the feedback bit at position 4
+            lfsr_out <= {lfsr_out[3:0], feedback};
+        end
+    end
 
+    endmodule
+    module level1(
+    input wire R1, R2, R3, R4, R5,       // R : Random Input bits
+    input wire E1, E2, E3, E4, E5,       // E : Expected Output bits
+    output wire O1, O2, O3, O4, O5,      // O : Actual Output bits
+    output wire LEVEL1_PASSED            // Equals to one if Level 1 is passed
+    );
+    wire notE5, x2, R2S0, R2E, MUXR2,notR2_eq_E1;
+    wire x3, R3S0, R3E, MUXR3;
+    wire x4, R4S0, R4E, MUXR4;
+
+    // Not gate for E5
+    not(notE5, E5);
+
+    // Assign expected outputs
+    assign E1 = 1;
+    assign E2 = 1;
+    assign E3 = 1;
+    assign E4 = 1;
+    assign E5 = 0;
+
+    // Output O1 is directly R1
+    assign O1 = R1;
+
+    // Logic for R2
+    wire R2_eq_E1; // R2 should match E1
+    xor(R2_eq_E1, R1, E1);
+    not(notR2_eq_E1,R2_eq_E1);
+    and(x2, R2, notR2_eq_E1); // x2 = R2 & ~ (R1 ^ E1)
+    xor(R2S0, x2, E2);
+    and(R2E, notR2_eq_E1, 1'b1); // R2E = ~(R1 ^ E1)
+    assign MUXR2 = (R2E) ? (R2S0 ? E2 : x2) : 1'b0; // MUX for R2 correction
+    assign O2 = MUXR2;
+
+    // Logic for R3
+    wire R3_and_MUXR2;
+    and(R3_and_MUXR2, R3, MUXR2);
+    xor(R3S0, R3_and_MUXR2, E3);
+    and(R3E, MUXR2, 1'b1); // R3E = MUXR2
+    assign MUXR3 = (R3E) ? (R3S0 ? E3 : R3_and_MUXR2) : 1'b0; // MUX for R3 correction
+    assign O3 = MUXR3;
+
+    // Logic for R4
+    wire R4_and_MUXR3;
+    and(R4_and_MUXR3, R4, MUXR3);
+    xor(R4S0, R4_and_MUXR3, E4);
+    and(R4E, MUXR3, 1'b1); // R4E = MUXR3
+    assign MUXR4 = (R4E) ? (R4S0 ? E4 : R4_and_MUXR3) : 1'b0; // MUX for R4 correction
+    assign O4 = MUXR4;
+
+    // Output O5 is directly R5 (non-essential subsystem)
+    assign O5 = R5;
+
+    // Passing condition for Level 1
+    assign LEVEL1_PASSED = O1 & O2 & O3 & O4; 
+
+    endmodule
+    module level2(
+    input wire clk,          // Clock input
+    input wire rst,          // Reset input
+    input wire E1L2, E2L2, E3L2, E4L2, E5L2, // E: Expected Output bits
+    input wire SWITCH1L2,    // Switch input for controlling R4L2
+    output wire O1L2, O2L2, O3L2, O4L2, O5L2, // O: Actual Output bits
+    output wire LEVEL2_PASSED, // Equals 1 if Level 2 is passed
+    output wire userR4L2     // Output for turning on/off subsystem R4
+    );
+
+    wire [4:0] lfsr_out;    // Output from the LFSR
+    wire R1L2, R2L2, R3L2, R4L2, R5L2; // Random input bits taken from LFSR output
+
+    // Instantiate the LFSR module (assumed)
+    lfsr_5bit lfsr_inst (
+        .clk(clk),
+        .rst(rst),
+        .lfsr_out(lfsr_out)
+    );
+
+    // Assign LFSR outputs to the random input bits
+    assign R1L2 = lfsr_out[0];
+    assign R2L2 = lfsr_out[1];
+    assign R3L2 = lfsr_out[2];
+    assign R4L2 = lfsr_out[3];
+    assign R5L2 = lfsr_out[4];
+
+    wire notE5, x2, R2S0, R2E, MUXR2,notR2_eq_E1L2;
+    wire x3, R3S0, R3E, MUXR3;
+    wire x4, R4S0, R4E, MUXR4;
+
+    // Not gate for E5L2
+    not(notE5, E5L2);
+
+    // Assign expected outputs
+    assign E1L2 = 1;
+    assign E2L2 = 1;
+    assign E3L2 = 1;
+    assign E4L2 = 0;
+    assign E5L2 = 0;
+
+    // Output O1L2 is directly R1L2
+    assign O1L2 = R1L2;
+
+    // Logic for R2L2
+    wire R2_eq_E1L2;
+    xor(R2_eq_E1L2, R1L2, E1L2);
+    not(notR2_eq_E1L2,R2_eq_E1L2);
+    and(x2, R2L2,notR2_eq_E1L2); // x2 = R2L2 & ~ (R1L2 ^ E1L2)
+    xor(R2S0, x2, E2L2);
+    and(R2E,notR2_eq_E1L2, 1'b1); // R2E = ~(R1L2 ^ E1L2)
+    assign MUXR2 = (R2E) ? (R2S0 ? E2L2 : x2) : 1'b0; // MUX for R2 correction
+    assign O2L2 = MUXR2;
+
+    // Logic for R3L2
+    wire R3_and_MUXR2;
+    and(R3_and_MUXR2, R3L2, MUXR2);
+    xor(R3S0, R3_and_MUXR2, E3L2);
+    and(R3E, MUXR2, 1'b1); // R3E = MUXR2
+    assign MUXR3 = (R3E) ? (R3S0 ? E3L2 : R3_and_MUXR2) : 1'b0; // MUX for R3 correction
+    assign O3L2 = MUXR3;
+
+    // Logic for R4L2
+    wire R4_and_MUXR3;
+    and(R4_and_MUXR3, R4L2, MUXR3);
+    xor(R4S0, R4_and_MUXR3, E4L2);
+    and(R4E, SWITCH1L2, 1'b1); // R4E = SWITCH1L2
+    assign MUXR4 = (R4E) ? (R4S0 ? E4L2 : R4_and_MUXR3) : 1'b0; // MUX for R4 correction
+    assign O4L2 = MUXR4;
+
+    // Output O5L2 is directly R5L2
+    assign O5L2 = R5L2;
+
+    // Condition for R4L2 if the user wants to switch the subsystem off
+    assign userR4L2 = SWITCH1L2 ? 1 : 0;
+    assign O4L2 = userR4L2 ? 0 : R4L2;
+
+    // Passing condition for Level 2
+    assign LEVEL2_PASSED = O1L2 & O2L2 & O3L2;
+
+    endmodule
+    module level3(
+    input wire clk,          // Clock input
+    input wire rst,          // Reset input
+    input wire E1L3, E2L3, E3L3, E4L3, E5L3,  // E: Expected Output bits
+    input wire SWITCH1L3,    // Switch input for controlling R4L3
+    input wire SWITCH2L3,    // Switch input for controlling R3L3
+    output wire O1L3, O2L3, O3L3, O4L3, O5L3, // O: Actual Output bits
+    output wire LEVEL3_PASSED, // Equals 1 if Level 3 is passed
+    output wire userR4L3,     // Output for turning on/off subsystem R4
+    output wire userR3L3      // Output for turning on/off subsystem R3
+    );
+
+    wire [4:0] lfsr_out;    // Output from the LFSR
+    wire R1L3, R2L3, R3L3, R4L3, R5L3; // Random input bits taken from LFSR output
+
+    // Instantiate the LFSR module (assumed)
+    lfsr_5bit lfsr_inst (
+        .clk(clk),
+        .rst(rst),
+        .lfsr_out(lfsr_out)
+    );
+
+    // Assign LFSR outputs to the random input bits
+    assign R1L3 = lfsr_out[0];
+    assign R2L3 = lfsr_out[1];
+    assign R3L3 = lfsr_out[2];
+    assign R4L3 = lfsr_out[3];
+    assign R5L3 = lfsr_out[4];
+
+    wire notE5, x2, R2S0, R2E, MUXR2,notR2_eq_E1L3;
+    wire x3, R3S0, R3E, MUXR3;
+    wire x4, R4S0, R4E, MUXR4;
+
+    // Not gate for E5L3
+    not(notE5, E5L3);
+
+    // Assign expected outputs
+    assign E1L3 = 1;
+    assign E2L3 = 1;
+    assign E3L3 = 1;
+    assign E4L3 = 0;
+    assign E5L3 = 0;
+
+    // Output O1L3 is directly R1L3
+    assign O1L3 = R1L3;
+
+    // Logic for R2L3
+    wire R2_eq_E1L3;
+    xor(R2_eq_E1L3, R1L3, E1L3);
+    not(notR2_eq_E1L3,R2_eq_E1L3);
+    and(x2, R2L3,notR2_eq_E1L3); // x2 = R2L3 & ~ (R1L3 ^ E1L3)
+    xor(R2S0, x2, E2L3);
+    and(R2E, notR2_eq_E1L3, 1'b1); // R2E = ~(R1L3 ^ E1L3)
+    assign MUXR2 = (R2E) ? (R2S0 ? E2L3 : x2) : 1'b0; // MUX for R2 correction
+    assign O2L3 = MUXR2;
+
+    // Logic for R3L3
+    wire R3_and_MUXR2;
+    and(R3_and_MUXR2, R3L3, MUXR2);
+    xor(R3S0, R3_and_MUXR2, E3L3);
+    and(R3E, MUXR2, 1'b1); // R3E = MUXR2
+    assign userR3L3 = SWITCH2L3 ? 1 : 0;
+    assign O3L3 = userR3L3 ? 0 : R3L3; // User control switch for R3L3
+    assign MUXR3 = (R3E) ? (R3S0 ? E3L3 : R3_and_MUXR2) : 1'b0; // MUX for R3 correction
+    assign O3L3 = MUXR3;
+
+    // Logic for R4L3
+    wire R4_and_MUXR3;
+    and(R4_and_MUXR3, R4L3, MUXR3);
+    xor(R4S0, R4_and_MUXR3, E4L3);
+    and(R4E, SWITCH1L3, 1'b1); // R4E = SWITCH1L3
+    assign userR4L3 = SWITCH1L3 ? 1 : 0;
+    assign O4L3 = userR4L3 ? 0 : R4L3; // User control switch for R4L3
+    assign MUXR4 = (R4E) ? (R4S0 ? E4L3 : R4_and_MUXR3) : 1'b0; // MUX for R4 correction
+    assign O4L3 = MUXR4;
+
+    // Output O5L3 is directly R5L3
+    assign O5L3 = R5L3;
+
+    // Passing condition for Level 3
+    assign LEVEL3_PASSED = O1L3 & O2L3; 
+
+    endmodule
+
+  ### Data Flow
+    module lfsr_5bit (
+    input clk,    // Clock input
+    input rst,    // Reset input
+    output reg [4:0] lfsr_out  // 5-bit output
+    );
+
+    wire feedback;
+
+    // Feedback is taken from bits 5 and 3 (tap positions 4 and 2 in Verilog, 0-indexed)
+    assign feedback = ~(lfsr_out[4] ^ lfsr_out[2]); 
+
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            // On reset, set LFSR to a non-zero seed value
+            lfsr_out <= 5'b00001;
+        end else begin
+            // Shift the LFSR and insert the feedback bit at position 4
+            lfsr_out <= {lfsr_out[3:0], feedback};
+        end
+    end
+
+    endmodule
+
+    module level1(
+    input wire R1, R2, R3, R4, R5,       //R : Random Input bits
+    input wire E1, E2, E3, E4, E5,       //E : Expected Output bits
+    output wire O1, O2, O3, O4, O5,      //O : Actual Output bits
+    output wire LEVEL1_PASSED            //Equals to one if Level 1 is passed
+    );
+
+    wire notE5, x2, R2S0, R2I0, R2I1, R2E, MUXR2, x3, R3S0, R3I0, R3I1, R3E, MUXR3, x4, R4S0, R4I0, R4I1, R4E, MUXR4;
+
+    // Not gate for E5
+    assign notE5 = ~E5;
+
+    assign E1=1;
+    assign E2=1;
+    assign E3=1;
+    assign E4=1;
+    assign E5=0;
+
+    // Output O1 is directly R1
+    assign O1 = R1;
+
+    // Logic for R2
+    assign x2 = R2 & (~(R1 ^ E1));
+    assign R2S0 = x2 ^ E2;
+    assign R2I0 = x2; 
+    assign R2I1 = E2;
+    assign R2E = ~(R1 ^ E1);
+    assign MUXR2 = R2E ? (R2S0 ? R2I1 : R2I0) : 1'b0; //Checking the R2 and  correcting it, if it's wrong
+    assign O2 = MUXR2; //R2 after correction
+
+    // Logic for R3
+    assign x3 = R3 & MUXR2;
+    assign R3S0 = x3 ^ E3;
+    assign R3I0 = x3;
+    assign R3I1 = E3;
+    assign R3E = MUXR2;
+    assign MUXR3 = R3E ? (R3S0 ? R3I1 : R3I0) : 1'b0; //Checking the R3 and  correcting it, if it's wrong
+    assign O3 = MUXR3; //R3 after correction
+
+    // Logic for R4
+    assign x4 = R4 & MUXR3;
+    assign R4S0 = x4 ^ E4;
+    assign R4I0 = x4;
+    assign R4I1 = E4;
+    assign R4E = MUXR3;
+    assign MUXR4 = R4E ? (R4S0 ? R4I1 : R4I0) : 1'b0; //Checking the R4 and  correcting it, if it's wrong
+    assign O4 = MUXR4; //R4 after correction
+
+    // Output O5 is directly R5
+    //Since R5 is non-essential subsystem
+    assign O5 = R5;
+
+    // Passing condition for Level 1 :
+    //All crucial subsystems(O1,O2,O3,O4) should be working
+    assign LEVEL1_PASSED = O1 & O2 & O3 & O4; 
+
+    endmodule
+    module level2(
+    input wire clk,          // Clock input
+    input wire rst,          // Reset input
+    input wire E1L2, E2L2, E3L2, E4L2, E5L2, // E: Expected Output bits
+    input wire SWITCH1L2,    // Switch input for controlling R4L2
+    output wire O1L2, O2L2, O3L2, O4L2, O5L2, // O: Actual Output bits
+    output wire LEVEL2_PASSED, // Equals 1 if Level 2 is passed
+    output wire userR4L2     // Output for turning on/off subsystem R4
+    );
+
+    wire [4:0] lfsr_out;    // Output from the LFSR
+    wire R1L2, R2L2, R3L2, R4L2, R5L2; // Random input bits taken from LFSR output
+
+    // Instantiate the LFSR module
+    lfsr_5bit lfsr_inst (
+        .clk(clk),
+        .rst(rst),
+        .lfsr_out(lfsr_out)
+    );
+
+    // Assign LFSR outputs to the random input bits R1L2 to R5L2
+    assign R1L2 = lfsr_out[0];
+    assign R2L2 = lfsr_out[1];
+    assign R3L2 = lfsr_out[2];
+    assign R4L2 = lfsr_out[3];
+    assign R5L2 = lfsr_out[4];
+
+    wire notE5, x2, R2S0, R2I0, R2I1, R2E, MUXR2, x3, R3S0, R3I0, R3I1, R3E, MUXR3, x4, R4S0, R4I0, R4I1, R4E, MUXR4;
+
+    // Not gate for E5L2
+    assign notE5 = ~E5L2;
+
+    assign E2L2=1;
+    assign E1L2=1;
+    assign E3L2=1;
+    assign E4L2=0;
+    assign E5L2=0;
+
+    // Output O1L2 is directly R1L2
+    assign O1L2 = R1L2;
+
+    // Logic for R2L2
+    assign x2 = R2L2 & (~(R1L2 ^ E1L2));
+    assign R2S0 = x2 ^ E2L2;
+    assign R2I0 = x2; // Correcting the undefined x1
+    assign R2I1 = E2L2;
+    assign R2E = ~(R1L2 ^ E1L2);
+    assign MUXR2 = R2E ? (R2S0 ? R2I1 : R2I0) : 1'b0;   //Checking the R2L2 and  correcting it, if it's wrong
+    assign O2L2 = MUXR2;  //R2L2 after correction
+
+
+    // Logic for R3L2
+    assign x3 = R3L2 & MUXR2;
+    assign R3S0 = x3 ^ E3L2;
+    assign R3I0 = x3;
+    assign R3I1 = E3L2;
+    assign R3E = MUXR2;
+    assign MUXR3 = R3E ? (R3S0 ? R3I1 : R3I0) : 1'b0;  //Checking the R3 and  correcting it, if it's wrong
+    assign O3L2 = MUXR3;  //R3L2 after correction
+
+    // Logic for R4L2
+    assign x4 = R4L2 & MUXR3;
+    assign R4S0 = x4 ^ E4L2;
+    assign R4I0 = x4;
+    assign R4I1 = E4L2;
+    assign R4E = SWITCH1L2;
+    assign MUXR4 = R4E ? (R4S0 ? R4I1 : R4I0) : 1'b0;  //Checking the R4 and correcting it, if it's wrong
+    assign O4L2 = MUXR4;  //R4L2 after correction
+
+    // Output O5L2 is directly R5L2
+    assign O5L2 = R5L2;
+
+    // Condition for R4L2 if the user wants to switch the subsystem off
+    assign userR4L2 = (SWITCH1L2) ? 1 : 0;
+    assign O4L2 = (userR4L2) ? 0 : R4L2;
+    // Passing condition for Level 2:
+    // All crucial subsystems (O1L2, O2L2, O3L2) should be working
+    assign LEVEL2_PASSED = O1L2 & O2L2 & O3L2;
+    
+
+    endmodule
+    // Level 3 Module that uses LFSR outputs as input
+     module level3(
+    input wire clk,          // Clock input
+    input wire rst,          // Reset input
+    input wire E1L3, E2L3, E3L3, E4L3, E5L3,  // E: Expected Output bits
+    input wire SWITCH1L3,    // Switch input for controlling R4L3
+    input wire SWITCH2L3,    // Switch input for controlling R3L3
+    output wire O1L3, O2L3, O3L3, O4L3, O5L3, // O: Actual Output bits
+    output wire LEVEL3_PASSED, // Equals 1 if Level 3 is passed
+    output wire userR4L3,    // Output for turning on/off subsystem R4L3
+    output wire userR3L3     // Output for turning on/off subsystem R3L3
+    );
+
+    wire [4:0] lfsr_out;    // Output from the LFSR
+    wire R1L3, R2L3, R3L3, R4L3, R5L3; // Random input bits taken from LFSR output
+
+    // Instantiate the LFSR module
+    lfsr_5bit lfsr_inst (
+        .clk(clk),
+        .rst(rst),
+        .lfsr_out(lfsr_out)
+    );
+
+    // Assign LFSR outputs to the random input bits R1L3 to R5L3
+    assign R1L3 = lfsr_out[0];
+    assign R2L3 = lfsr_out[1];
+    assign R3L3 = lfsr_out[2];
+    assign R4L3 = lfsr_out[3];
+    assign R5L3 = lfsr_out[4];
+
+    wire notE5, x2, R2S0, R2I0, R2I1, R2E, MUXR2, x3, R3S0, R3I0, R3I1, R3E, MUXR3, x4, R4S0, R4I0, R4I1, R4E, MUXR4;
+
+    // Not gate for E5L3
+    assign notE5 = ~E5L3;
+
+    assign E1L3=1;
+    assign E2L3=1;
+    assign E3L3=0;
+    assign E4L3=0;
+    assign E5L3=0;
+
+
+
+    // Output O1L3 is directly R1L3
+    assign O1L3 = R1L3;
+
+    // Logic for R2L3
+    assign x2 = R2L3 & (~(R1L3 ^ E1L3));
+    assign R2S0 = x2 ^ E2L3;
+    assign R2I0 = x2; // Correcting the undefined x1
+    assign R2I1 = E2L3;
+    assign R2E = ~(R1L3 ^ E1L3);
+    assign MUXR2 = R2E ? (R2S0 ? R2I1 : R2I0) : 1'b0;   //Checking the R2L3 and correcting it if it's wrong
+    assign O2L3 = MUXR2;     //R2L3 after correction
+    // Logic for R3L3
+    assign x3 = R3L3 & MUXR2;
+    assign R3S0 = x3 ^ E3L3;
+    assign R3I0 = x3;
+    assign R3I1 = E3L3;
+    assign R3E = SWITCH2L3;
+    assign MUXR3 = R3E ? (R3S0 ? R3I1 : R3I0) : 1'b0;   //Checking the R3L3 and correcting it if it's wrong  
+    assign O3L3 = MUXR3;    //R3L3 after correction
+
+    // Logic for R4L3
+    assign x4 = R4L3 & MUXR3;
+    assign R4S0 = x4 ^ E4L3;
+    assign R4I0 = x4;
+    assign R4I1 = E4L3;
+    assign R4E = SWITCH1L3;
+    assign MUXR4 = R4E ? (R4S0 ? R4I1 : R4I0) : 1'b0;   //Checking the R4L3 and correcting it if it's wrong
+    assign O4L3 = MUXR4;  //R4L3 after correction
+
+    // Output O5L3 is directly R5L3
+    assign O5L3 = R5L3;
+
+    // Conditions for switching subsystems R3L3 and R4L3 off
+    assign userR3L3 = (SWITCH1L3) ? 1 : 0;
+    assign userR4L3 = (SWITCH2L3) ? 1 : 0;
+    assign O3L3 = (userR3L3) ? 0 : R3L3;
+    assign O4L3 = (userR4L3) ? 0 : R4L3;
+
+    // Passing condition for Level 3:
+    // All crucial subsystems (O1L3, O2L3) should be working
+     assign LEVEL3_PASSED = O1L3 & O2L3;
+    endmodule
+
+
+  ### Test Bench
+    module spacecraft_fault_tolerance_tb;
+    reg clk;
+    reg rst;
+
+    // Inputs for Level 1
+    reg R1, R2, R3, R4, R5;
+    reg [4:0] E; // Register for E
+    wire O1, O2, O3, O4, O5;
+    wire LEVEL1_PASSED;
+
+    // Inputs for Level 2
+    reg SWITCH1L2;
+    reg userR4L2;
+    wire O1L2, O2L2, O3L2, O4L2, O5L2;
+    wire LEVEL2_PASSED;
+
+    // Inputs for Level 3
+    reg SWITCH1L3, SWITCH2L3;
+    reg userR3L3, userR4L3;
+    wire O1L3, O2L3, O3L3, O4L3, O5L3;
+    wire LEVEL3_PASSED;
+
+    // Declare temporary registers for Level 2 and Level 3 outputs
+    reg O4L2_reg; // Temporary register for Level 2 O4
+    reg O3L3_reg; // Temporary register for Level 3 O3
+    reg O4L3_reg; // Temporary register for Level 3 O4
+
+    // Instantiate LFSR for random number generation
+    reg [4:0] lfsr;
+
+    // Clock generation
+    always #20 clk = ~clk;
+
+    // LFSR for generating pseudo-random numbers
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            lfsr <= 5'b10001; // Initial seed
+        end else begin
+            lfsr <= {lfsr[3:0], lfsr[4] ^ lfsr[2]}; // LFSR feedback taps
+        end
+    end
+
+    // Assign initial value for E (for Level 1)
+    initial begin
+        E = 5'b11110; // Set a constant value for E for Level 1
+    end
+
+    // Assign random inputs based on LFSR output
+    always @(posedge clk) begin
+        if (!rst) begin
+            // Generate random inputs for Level 1
+            R1 <= lfsr[0]; // Random bit (0 or 1)
+            R2 <= lfsr[1];
+            R3 <= lfsr[2];
+            R4 <= lfsr[3];
+            R5 <= lfsr[4];
+        end
+    end
+
+    // Instantiate Level 1
+    level1 level1_inst (
+        .R1(R1), .R2(R2), .R3(R3), .R4(R4), .R5(R5),
+        .E1(E[4]), .E2(E[3]), .E3(E[2]), .E4(E[1]), .E5(E[0]),
+        .O1(O1), .O2(O2), .O3(O3), .O4(O4), .O5(O5),
+        .LEVEL1_PASSED(LEVEL1_PASSED)
+    );
+
+    // Instantiate Level 2
+    level2 level2_inst (
+        .clk(clk), .rst(rst),
+        .E1L2(E[4]), .E2L2(E[3]), .E3L2(E[2]), .E4L2(E[1]), .E5L2(E[0]),
+        .SWITCH1L2(SWITCH1L2),
+        .O1L2(O1L2), .O2L2(O2L2), .O3L2(O3L2), .O4L2(O4L2), .O5L2(O5L2),
+        .LEVEL2_PASSED(LEVEL2_PASSED)
+    );
+
+    // Instantiate Level 3
+    level3 level3_inst (
+        .clk(clk), .rst(rst),
+        .E1L3(E[4]), .E2L3(E[3]), .E3L3(E[2]), .E4L3(E[1]), .E5L3(E[0]),
+        .SWITCH1L3(SWITCH1L3), .SWITCH2L3(SWITCH2L3),
+        .O1L3(O1L3), .O2L3(O2L3), .O3L3(O3L3), .O4L3(O4L3), .O5L3(O5L3),
+        .LEVEL3_PASSED(LEVEL3_PASSED)
+    );
+
+    initial begin
+        // Initialize the clock and reset
+        clk = 0;
+        rst = 1;
+        SWITCH1L2 = 0;
+        SWITCH1L3 = 0;
+        SWITCH2L3 = 0;
+
+        // Wait for some time and then release reset
+        #20;
+        rst = 0;
+
+        // Loop to generate multiple test sets
+        repeat (3) begin // Adjust the number of test runs as needed
+            #40; // Wait for outputs to stabilize
+
+            // Set E for Level 1
+            E = 5'b11110; 
+            $display("Level 1 Inputs: R1L1=%b R2L1=%b R3L1=%b R4L1=%b R5L1=%b EL1=%b", R1, R2, R3, R4, R5, E);
+            
+            if (LEVEL1_PASSED) begin
+                $display("Level 1 Passed: O1L1=%b O2L1=%b O3L1=%b O4L1=%b O5L1=%b", O1, O2, O3, O4, O5);
+
+                // Generate random inputs for Level 2
+                SWITCH1L2 = 1;
+                #20; // Wait for Level 2 outputs
+                // Set E for Level 2
+                E = 5'b11100; 
+                $display("Level 2 running...");
+                $display("Level 2 Inputs: R1L2=%b R2L2=%b R3L2=%b R4L2=%b R5L2=%b EL2=%b", R1, R2, R3, R4, R5, E);
+                
+                if (LEVEL2_PASSED) begin
+                    // User Prompt for Level 2: 4th Bit
+                    userR4L2 = lfsr[0]; // Randomize user input (0 or 1)
+
+                    if (userR4L2) begin
+                        O4L2_reg = 0; // Switch off the 4th bit
+                        $display("User asked to switch off 4th bit. O4L2 set to 0.");
+                    end 
+                    else begin
+                        O4L2_reg = R4; // Keep the original 4th bit state
+                        $display("User chose not to switch off the 4th bit. O4L2=%b", R4);
+                    end
+
+                    $display("Level 2 Passed: O1L2=%b O2L2=%b O3L2=%b O4L2=%b O5L2=%b", O1L2, O2L2, O3L2, O4L2_reg, O5L2);
+                    
+                    // Set E for Level 3
+                    E = 5'b11000; 
+                    SWITCH1L3 = 1;
+
+                    // Generate random inputs for Level 3
+                    #20; // Wait for Level 3 outputs
+                    $display("Level 3 running...");
+                    $display("Level 3 Inputs: R1L3=%b R2L3=%b R3L3=%b R4L3=%b R5L3=%b EL3=%b", R1, R2, R3, R4, R5, E);
+                    if (LEVEL3_PASSED) begin
+                        userR3L3 = lfsr[0]; // Randomize user input (0 or 1)
+                        userR4L3 = lfsr[1];
+
+                        if (userR3L3) begin
+                            O3L3_reg = 0; // Switch off the 3rd bit
+                            $display("User asked to switch off 3rd bit. O3L3 set to 0.");
+                        end 
+                        else begin
+                            O3L3_reg = R3; // Keep the original 3rd bit state
+                            $display("User chose not to switch off the 3rd bit. O3L3=%b", R3);
+                        end
+
+                        if (userR4L3) begin
+                            O4L3_reg = 0; // Switch off the 4th bit
+                            $display("User asked to switch off 4th bit. O4L3 set to 0.");
+                        end 
+                        else begin
+                            O4L3_reg = R4; // Keep the original 4th bit state
+                            $display("User chose not to switch off the 4th bit. O4L3=%b", R4);
+                        end
+
+                        $display("Level 3 Passed: O1L3=%b O2L3=%b O3L3=%b O4L3=%b O5L3=%b", O1L3, O2L3, O3L3_reg, O4L3_reg, O5L3);
+                        $display("MISSION SUCCESSFUL!");
+                    end else begin
+                        $display("Level 3 Failed!");
+                        $display("MISSION FAILED!");
+                    end
+                end else begin
+                    $display("Level 2 Failed!");
+                    $display("MISSION ABORTED!");
+                    
+                end
+            end else begin
+                $display("Level 1 Failed!");
+                $display("MISSION ABORTED!");
+            end
+            // Add a blank line after each test iteration
+            $display("\n-----------------------------\n");
+        end
+        $finish;
+    end
+    endmodule
 </details>
 
 <!-- Seventh Section -->
