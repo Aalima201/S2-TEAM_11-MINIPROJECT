@@ -4,13 +4,18 @@
 ## Team Details
 <details>
   <summary>Details</summary>
-- **Semester**: 3rd Sem B. Tech. CSE
-- **Section**: S2
-- **Team ID**: 11
+  
+ > Semester: 3rd Sem B. Tech. CSE
+> 
+ > Section: S2
+> 
+ > Team ID: 11
 
-1. **Aalima Khan**, Roll No: 231CS201, [Email](mailto:aalimakhan.231cs217@nitk.edu.in)
-2. **Basitha Sadipirala**, Roll No: 231CS251, [Email](mailto:basithasadipirala.231cs251@nitk.edu.in)
-3. **Bukke Lahari**, Roll No: 231CS217, [Email](mailto:laharinaik.231cs217@nitk.edu.in)
+> **Aalima Khan**, Roll No: 231CS201, [Email](mailto:aalimakhan.231cs217@nitk.edu.in)
+  >
+>  **Basitha Sadipirala**, Roll No: 231CS251, [Email](mailto:basithasadipirala.231cs251@nitk.edu.in)
+  >
+> **Bukke Lahari**, Roll No: 231CS217, [Email](mailto:laharinaik.231cs217@nitk.edu.in)
 </details>
 <!-- Second Section -->
 
@@ -112,6 +117,8 @@ level pass, and the mission will terminate upon any critical failure.
 ### Truth Tables:
  #### LEVEL1:
  ##### Reason for “!!”
+ ![LEVEL 1 Truth Table](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/5038f85f8502d3ce026e76fb4331a6c2a4f57278/Snapshots/LEVEL%201%20truth%20table.png)
+>
  In level 1, since the first bit (R1) is 0, the enable signal for R2 also becomes 0, causing the multiplexer
  (MUX) for R2 not to function, and it outputs an indeterminate signal (x). This "x" signal is mixed, meaning
  it could be either 0 or 1, which leads to uncertainty and triggers an error (indicated by a red line). As a
@@ -123,12 +130,16 @@ level pass, and the mission will terminate upon any critical failure.
  meet the expected conditions.
 #### LEVEL 2:
  ##### Reason for “!!”
+  ![LEVEL 2 Truth Table]()
+  >
  Unlike in Level 1, in Level 2, we give the user the option to decide whether to switch off the non-crucial
  subsystem (R4). However, this user interaction is only possible if the outputs O1, O2, and O3 match the
  expected bits. This ensures that only after verifying the crucial subsystems can the user be asked about
  the non-crucial subsystem's status.
 ### LEVEL 3:
 #### Reason for “!!”
+ ![LEVEL 3 Truth Table]()
+ >
  In Level 3, there are two non-crucial subsystems (R3 and R4), so the user is asked whether they want to
  switch off both non-crucial subsystems. The interesting point here is that if the user denies switching off
  R3 (via switch1) but permits switching off R4 (via switch2), the output O4 still won’t change. This is
@@ -138,7 +149,19 @@ level pass, and the mission will terminate upon any critical failure.
 R5 is a non-essential subsystem and operates independently of the other bits. Therefore, its status
  does not affect the outcomes or dependencies related to the other subsystems.
  MULTIPLEXER(2 X 1)
-### STATE DIAGRAM:
+ ![MUX Truth Table]()
+ >
+ E: Enable
+>
+S0: Select line
+>
+I0 : Input 0
+>
+I1 : Input 1
+>
+Y : Output
+ ### STATE DIAGRAM:
+  ![State Diagram]()
  S:Before correction
  >
  C:After correction
