@@ -17,9 +17,78 @@
 ## Abstract
 <details>
   <summary>Details</summary>
-  
- 
-  -[click here](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/Fault%20Tolerance%20in%20Spacecrafts(ABSTRACT).pdf) 
+
+  ### Motivation:
+  Our fascination with space exploration drives this project, aiming to ensure
+  high reliability in extreme and remote environments. Developing a fault-tolerant system for
+  spacecraft is critical for maintaining mission continuity despite subsystem failures, minimizing
+  human intervention, and safeguarding astronaut safety. Historical mission challenges, such as
+  Apollo 13 and the James Webb Space Telescope, emphasize the need for robust fault-tolerant
+  systems in future missions.
+ > 
+### Problem Statement:
+The goal of this project is to design a multi-layered digital circuit-
+based fault diagnosis and recovery system. This system will employ a hierarchical approach,
+where subsystems are organized into levels based on their criticality to the spacecraft’s mis-
+sion. A level-by-level verification ensures that critical subsystems are diagnosed and recovered
+efficiently to minimize mission disruption.
+>
+#### System Architecture:
+##### Level 1:Base Layer
+– Subsystems: Advanced Sensors, Data Acquisition and Analysis, Advanced Materials,
+Device Failure Physics, Thermal Regulation.
+>
+– The system will first focus on diagnosing and recovering these subsystems to ensure
+the spacecraft’s baseline functionality. One subsystem in this level is crucial but
+uncorrectable; if this subsystem fails, the mission will terminate immediately. Passing
+Level 1 is mandatory for the mission to proceed to the next level.
+##### Level 2: Functional Module Implementation Layer
+– Subsystems: Power Status Monitoring, Attitude Control, Load Monitoring, Measure-
+ment Control, Communications Integrity.
+>
+– If Level 1 is passed, this layer ensures that subsystems crucial for spacecraft stability,
+control, and communication are fully operational. One subsystem in this layer is
+uncorrectable, and if it fails, the mission will terminate.
+##### Level 3: Task Goal Implementation Layer
+– Subsystems: Fault Detection, Fault Isolation, Fault Prediction, Health Assessment,
+Repair Planning.
+>
+– This final level assesses and ensures fault detection and health management systems
+are functioning. The same condition applies—one uncorrectable subsystem must
+pass, and failure will lead to mission termination.
+##### Non-Critical Subsystems:
+These subsystems, although not essential for the core space-
+craft operations, can be monitored and toggled based on the user’s discretion. In an ideal
+operational scenario, all non-crucial subsystems are turned off to conserve resources. Fail-
+ures in non-crucial subsystems are tolerated.
+#### Mission Termination Conditions:
+• If any crucial subsystem, particularly the uncorrectable ones in each level, fails to recover,
+the mission will terminate immediately.
+• Progression to the next level occurs only if all crucial subsystems in the current level are
+functional. Failure to pass any level results in mission termination.
+• For the mission to succeed, all levels must be passed.
+#### Key components:
+• Basic Logic gates 
+>
+• MUX(2x1)
+>
+• Shifters
+>
+• D-Flip Flops
+>
+• LEDs
+### Features:
+• A layered approach ensures that critical subsystems are prioritized in diagnosis and re-
+covery, minimizing the overall recovery time.
+>
+• Built-in error detection mechanisms ensure system self-correction without human inter-
+vention.
+>
+• Users can decide whether to activate non-crucial subsystems, with the ideal scenario being
+that these subsystems are turned off.
+>
+• A predefined recovery plan ensures the mission continues only if all subsystems in every
+level pass, and the mission will terminate upon any critical failure.
 </details>
 <!-- Third Section -->
 
