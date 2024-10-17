@@ -130,7 +130,7 @@ level pass, and the mission will terminate upon any critical failure.
  meet the expected conditions.
 #### LEVEL 2:
  ##### Reason for “!!”
-  ![LEVEL 2 Truth Table]()
+  ![LEVEL 2 Truth Table](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/d5dbd00d0816aa6d73802d84444027deada1ee63/Snapshots/LEVEL%202%20truth%20table.png)
   >
  Unlike in Level 1, in Level 2, we give the user the option to decide whether to switch off the non-crucial
  subsystem (R4). However, this user interaction is only possible if the outputs O1, O2, and O3 match the
@@ -138,7 +138,7 @@ level pass, and the mission will terminate upon any critical failure.
  the non-crucial subsystem's status.
 ### LEVEL 3:
 #### Reason for “!!”
- ![LEVEL 3 Truth Table]()
+ ![LEVEL 3 Truth Table](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/d5dbd00d0816aa6d73802d84444027deada1ee63/Snapshots/LEVEL%203%20truth%20table.png)
  >
  In Level 3, there are two non-crucial subsystems (R3 and R4), so the user is asked whether they want to
  switch off both non-crucial subsystems. The interesting point here is that if the user denies switching off
@@ -149,7 +149,7 @@ level pass, and the mission will terminate upon any critical failure.
 R5 is a non-essential subsystem and operates independently of the other bits. Therefore, its status
  does not affect the outcomes or dependencies related to the other subsystems.
  MULTIPLEXER(2 X 1)
- ![MUX Truth Table]()
+ ![MUX Truth Table](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/d5dbd00d0816aa6d73802d84444027deada1ee63/Snapshots/MUX%20truth%20table.png)
  >
  E: Enable
 >
@@ -161,7 +161,7 @@ I1 : Input 1
 >
 Y : Output
  ### STATE DIAGRAM:
-  ![State Diagram]()
+  ![State Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/d5dbd00d0816aa6d73802d84444027deada1ee63/Snapshots/State%20Diagram.png)
  S:Before correction
  >
  C:After correction
