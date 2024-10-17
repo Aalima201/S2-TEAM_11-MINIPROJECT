@@ -1,45 +1,31 @@
 #  FAULT TOLERANCE MECHANISMS FOR SPACECRAFTS
 
----
-
+<!-- First Section -->
+## Team Details
 <details>
-  
-  ## Team Details
-
+  <summary>Details</summary>
 - **Semester**: 3rd Sem B. Tech. CSE
 - **Section**: S2
 - **Team ID**: 11
 
-### Team Members:
 1. **Aalima Khan**, Roll No: 231CS201, [Email](mailto:aalimakhan.231cs217@nitk.edu.in)
 2. **Basitha Sadipirala**, Roll No: 231CS251, [Email](mailto:basithasadipirala.231cs251@nitk.edu.in)
 3. **Bukke Lahari**, Roll No: 231CS217, [Email](mailto:laharinaik.231cs217@nitk.edu.in)
-
-  
-  
 </details>
+<!-- Second Section -->
 
----
-
-</details>
+## Abstract
 <details>
-  <summary>Abstract</summary>
+  <summary>Details</summary>
   
  
   -[click here](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/Fault%20Tolerance%20in%20Spacecrafts(ABSTRACT).pdf) 
 </details>
+<!-- Third Section -->
 
----
+## Block Diagram
 <details>
-  <summary>Flowchart</summary>
-  
-  ![Flowchart referred for project](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/TechnicalArchitecture.png) 
-  
-</details>
-
----
-<details>
-  <summary>Functional Block Diagram</summary>
+  <summary>Details</summary>
   
   
   
@@ -48,25 +34,25 @@
 
   
 </details>
+<!-- Fourth Section -->
 
----
-
+## Working
 <details>
-  <summary>Working</summary>
+  <summary>Details</summary>
   
   -[click here](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Snapshots/WORKING.pdf)
   
 </details>
+<!-- Fifth Section -->
 
----
-
+## Logisim
 <details>
   <summary>Logisim</summary>
   
   
   
   
-  MAIN CIRCUIT![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/S2-T11.png)
+  MAIN CIRCUIT ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/S2-T11.png)
  LEVEL 1 ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level1Image.png)
 LEVEL 2  ![LEVEL 2 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level2Image.png)
 LEVEL 3  ![LEVEL 3 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level3.Image.png)
@@ -81,8 +67,9 @@ LEVEL 3  ![LEVEL 3 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MI
   
 </details>
 
----
+<!-- Sixth Section -->
 
+## Verilog
 <details>
   <summary>Verilog</summary>
   
@@ -105,7 +92,9 @@ vvp dds
 
 </details>
 
----
+<!-- Seventh Section -->
+
+## References
  <details> <summary>References</summary>
 
 
