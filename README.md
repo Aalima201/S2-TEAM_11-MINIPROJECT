@@ -179,10 +179,7 @@ Level2_passed = O1.O2.O3
 
 ## Logisim
 <details>
-  <summary>Logisim</summary>
-  
-  
-  
+  <summary>Details</summary>
   
   ### MAIN CIRCUIT
   ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/S2-T11.png)
@@ -201,7 +198,7 @@ Level2_passed = O1.O2.O3
 
 ## Verilog
 <details>
-  <summary>Verilog</summary>
+  <summary>Details</summary>
   
   ### Gate Flow
     module lfsr_5bit (
@@ -884,7 +881,7 @@ Level2_passed = O1.O2.O3
 <!-- Seventh Section -->
 
 ## References
- <details> <summary>References</summary>
+ <details> <summary>Details</summary>
 
 
 - [Link 1](https://ntrs.nasa.gov/api/citations/20210020739/downloads/FinalCopy.pdf/)
