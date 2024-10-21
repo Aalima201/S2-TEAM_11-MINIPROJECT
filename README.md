@@ -190,7 +190,7 @@ Level2_passed = O1.O2.O3
 ### LEVEL 3
 ![LEVEL 3 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level3.Image.png)
 ### LFSR 
-![LFSR Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/LFSRImage.png)
+![LFSR Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/ae2bf319d1035249d6a33df3a0c4ef46da57df98/Logisim/Circuit%20%20Images/LFSR.png)
   
 </details>
 
