@@ -182,13 +182,13 @@ Level2_passed = O1.O2.O3
   <summary>Details</summary>
   
   ### MAIN CIRCUIT
-  ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/S2-T11.png)
+  ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/93e3db98ab9dd1d500044b6fea50d4d26e5bf897/Logisim/Circuit%20%20Images/S2_T11.png)
  ### LEVEL 1
- ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level1Image.png)
+ ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/93e3db98ab9dd1d500044b6fea50d4d26e5bf897/Logisim/Circuit%20%20Images/Level_1.png)
 ### LEVEL 2
-![LEVEL 2 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level2Image.png)
+![LEVEL 2 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/93e3db98ab9dd1d500044b6fea50d4d26e5bf897/Logisim/Circuit%20%20Images/Level_2.png)
 ### LEVEL 3
-![LEVEL 3 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/main/Logisim/Circuit%20%20Images/Level3.Image.png)
+![LEVEL 3 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/93e3db98ab9dd1d500044b6fea50d4d26e5bf897/Logisim/Circuit%20%20Images/Level_3.png)
 ### LFSR 
 ![LFSR Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/ae2bf319d1035249d6a33df3a0c4ef46da57df98/Logisim/Circuit%20%20Images/LFSR.png)
   
