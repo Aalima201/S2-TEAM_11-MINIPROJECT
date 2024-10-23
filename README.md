@@ -182,7 +182,7 @@ Level2_passed = O1.O2.O3
   <summary>Details</summary>
   
   ### MAIN CIRCUIT
-  ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/93e3db98ab9dd1d500044b6fea50d4d26e5bf897/Logisim/Circuit%20%20Images/S2_T11.png)
+  ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/8e1ba9abdda0ab817e440630d3c362b70373aa4b/Logisim/Circuit%20%20Images/S2_T11.png)
  ### LEVEL 1
  ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/93e3db98ab9dd1d500044b6fea50d4d26e5bf897/Logisim/Circuit%20%20Images/Level_1.png)
 ### LEVEL 2
