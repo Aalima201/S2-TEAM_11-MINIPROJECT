@@ -894,7 +894,6 @@ Level2_passed = O1.O2.O3
 
 </details>
 
-# S2-TEAM_11-MINIPROJECT
 
 ---
 
