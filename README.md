@@ -894,6 +894,25 @@ Level2_passed = O1.O2.O3
 
 </details>
 
+<!-- Eighth Section -->
+
+## Hardware Implementation
+ <details> <summary>Details</summary>
+
+  ### MAIN CIRCUIT
+  ![Logisim Final Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/2efb5ff34557033a1d25e9d549f926e269955c1b/HARDWARE%20IMPLEMENTATION/LOGISIM%20IMAGES/tc.png.jpg)
+ ### LEVEL 1
+ ![LEVEL 1 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/2efb5ff34557033a1d25e9d549f926e269955c1b/HARDWARE%20IMPLEMENTATION/LOGISIM%20IMAGES/l1.png.jpg)
+### LEVEL 2
+![LEVEL 2 Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/2efb5ff34557033a1d25e9d549f926e269955c1b/HARDWARE%20IMPLEMENTATION/LOGISIM%20IMAGES/l2.png.jpg)
+### LFSR 
+![LFSR Circuit Diagram](https://github.com/Lahari-Naik/S2-TEAM_11-MINIPROJECT/blob/2efb5ff34557033a1d25e9d549f926e269955c1b/HARDWARE%20IMPLEMENTATION/LOGISIM%20IMAGES/lsfr4.png.jpg)
+  
+
+
+
+
+</details>
 
 ---
 
